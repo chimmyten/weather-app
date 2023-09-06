@@ -1,11 +1,10 @@
-import React from "react";
 import { ReactComponent as HamburgerMenu } from "../assets/hamburger-menu.svg";
 import "./components.css";
 
 export default function Header() {
   return (
     <nav className="navbar navbar-light bg-light container-fluid justify-content-start">
-      <div className="mb-0 h1 col-2 col-lg-1">
+      <div className="mb-0 h1 col-2 col-lg-1 ps-4">
         <HamburgerMenu style={{ width: "35px" }} />
       </div>
       <div className="col-4 col-lg-2 offset-1 search-form-container">
