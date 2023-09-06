@@ -7,8 +7,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <TempDash />
-      <WeatherInfo/>
+      <div className="container d-flex justify-content-center border mt-4">
+        <div className="row">
+          <div className="col">
+            <TempDash />
+          </div>
+          <div className="col">
+            <WeatherInfo/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
