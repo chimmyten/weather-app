@@ -7,12 +7,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="container d-flex justify-content-center border mt-4">
-        <div className="row">
-          <div className="col">
+      <div className="container border mt-4">
+        <div className="row justify-content-center">
+          <div className="col-4">
             <TempDash />
           </div>
-          <div className="col">
+          <div className="col-4 row align-items-center">
             <WeatherInfo/>
           </div>
         </div>
