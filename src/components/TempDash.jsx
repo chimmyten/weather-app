@@ -1,17 +1,3 @@
-function UnitSwitch() {
-  return (
-    <div className="container p-0">
-      <div className="d-flex">
-          F
-        <div className="form-check form-switch ms-2">
-          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">C</label>
-        </div>
-      </div>
-  </div>
-  );
-}
-
 export function TempDashInfo() {
   return (
     <div className="info-container">
@@ -40,7 +26,6 @@ export function TempDashInfo() {
 export default function TempDash() {
   return (
     <>
-    <UnitSwitch />
     <TempDashInfo />
   </>
   )
