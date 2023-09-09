@@ -55,3 +55,9 @@
   border: none!important;
   margin-left: 15px;
 }
+
+.weather-description-img, .rain-img {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain !important;
+}

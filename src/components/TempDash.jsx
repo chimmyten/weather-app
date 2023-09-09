@@ -1,3 +1,5 @@
+import clearNight from "../assets/clear-night.png"
+
 export function TempDashInfo() {
   return (
     <div className="info-container">
@@ -6,8 +8,8 @@ export function TempDashInfo() {
       <div>
         <div className="temp m-0">70&deg;F</div>
         <div className="container">
-          <div className="row">
-            <div className="weather-description p-0">Clear Skies</div>
+          <div className="row w-50">
+            <div className="col-5 weather-description p-0">Clear Skies</div><img className = "weather-description-img col-1 img-fluid float-start p-0" src={clearNight} alt="clear-night" />
           </div>
           <div className="row">
             <div className="col-4 p-0">
