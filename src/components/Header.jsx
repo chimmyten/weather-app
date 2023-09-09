@@ -17,7 +17,7 @@ function UnitSwitch() {
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-light bg-light container-fluid justify-content-start">
+    <nav className="navbar navbar-expand-lg navbar-light container-fluid justify-content-start">
       <div className="mb-0 h1 col-2 col-lg-1 ps-4">
         <HamburgerMenu style={{ width: "35px" }} />
       </div>

@@ -1,3 +1,45 @@
 .search-form-container {
   text-align: left;
 }
+
+.forecast {
+  font-size: 1.4rem;
+}
+
+.forecast-stat {
+  font-size: 1.2rem;
+}
+
+.stat-container {
+  font-size: 1.15rem;
+}
+
+.location {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.temp {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.weather-description {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.low-temp, .high-temp {
+  font-size: 1.2rem;
+}
+
+.forecast-heading {
+  font-size: 2rem;
+}
+
+.sign-in-btn {
+  border-color: white;
+  color: white;
+  background-color: transparent;
+  border-radius: 2px;
+}
