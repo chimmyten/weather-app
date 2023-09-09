@@ -1,5 +1,12 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
+html, body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, rgb(75, 75, 249), rgb(82, 192, 236));
+  color: white;
+  background-attachment: fixed;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,9 +14,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom right, rgb(75, 75, 249), rgb(82, 192, 236));
-  height: 100vh;
-  color: white;
 }
 
 code {
