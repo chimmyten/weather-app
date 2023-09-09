@@ -1,17 +1,18 @@
-import { ReactComponent as HamburgerMenu } from "../assets/hamburger-menu.svg";
 import "./components.css";
 
 function UnitSwitch() {
   return (
     <div className="container p-0">
       <div className="d-flex">
-          F
+        F
         <div className="form-check form-switch ms-2">
           <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">C</label>
+          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            C
+          </label>
         </div>
       </div>
-  </div>
+    </div>
   );
 }
 
@@ -19,7 +20,28 @@ export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light container-fluid justify-content-start">
       <div className="mb-0 h1 col-2 col-lg-1 ps-4">
-        <HamburgerMenu style={{ width: "35px" }} />
+        <div className="dropdown">
+          <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Saved Locations
+          </button>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                New York, United States
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                San Francisco, United States
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Seattle, United States
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="col-4 col-lg-2 offset-1 search-form-container">
         <form className="form-inline">

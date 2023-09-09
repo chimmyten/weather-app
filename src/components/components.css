@@ -43,3 +43,15 @@
   background-color: transparent;
   border-radius: 2px;
 }
+
+.dropdown-toggle, .dropdown-item {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+}
+
+.dropdown-menu {
+  background-color: rgb(96, 43, 255) !important;
+  border: none!important;
+  margin-left: 15px;
+}
