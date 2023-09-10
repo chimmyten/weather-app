@@ -10,10 +10,10 @@ function App() {
       <Header />
       <div className="container mt-5">
         <div className="row justify-content-center">
-          <div className="col-5">
+          <div className="col-md-6 col-lg-5 ps-5">
             <TempDash />
           </div>
-          <div className="col-4 row align-items-center">
+          <div className="col-md-6 col-lg-5 row align-items-center">
             <WeatherInfo/>
           </div>
         </div>

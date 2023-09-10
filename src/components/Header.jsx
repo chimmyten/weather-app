@@ -19,10 +19,10 @@ function UnitSwitch() {
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light container-fluid justify-content-start">
-      <div className="mb-0 h1 col-2 col-lg-1 ps-4">
+      <div className="mb-0 h1 col-2 col-lg-1 ps-md-4">
         <div className="dropdown">
           <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Saved Locations
+            Favorites
           </button>
           <ul className="dropdown-menu">
             <li>
