@@ -25,7 +25,7 @@ export default function Header() {
             Favorites
           </button>
           <ul className="dropdown-menu">
-            <li>
+            {/* <li>
               <a className="dropdown-item" href="#">
                 New York, United States
               </a>
@@ -39,7 +39,7 @@ export default function Header() {
               <a className="dropdown-item" href="#">
                 Seattle, United States
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
