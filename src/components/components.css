@@ -27,6 +27,7 @@
 .weather-description {
   font-weight: 600;
   font-size: 1.2rem;
+  vertical-align: middle;
 }
 
 .low-temp, .high-temp {
