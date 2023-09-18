@@ -16,7 +16,13 @@ function UnitSwitch() {
   );
 }
 
-export default function Header() {
+export default function Header({ fetchData }) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    const input = e.target.querySelector(".search-bar");
+    const inputVal = input.value;
+    fetchData(inputVal);
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light container-fluid justify-content-start">
       <div className="mb-0 h1 col-2 col-lg-1 ps-md-4">
@@ -44,7 +50,7 @@ export default function Header() {
         </div>
       </div>
       <div className="col-4 col-lg-2 offset-1 search-form-container">
-        <form className="form-inline">
+        <form className="form-inline" onSubmit={handleSubmit}>
           <input className="form-control search-bar mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
         </form>
       </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export function TempDashInfo({ weatherData }) {
-  // console.log(weatherData);
+  console.log(weatherData);
   return (
     <div>
       <div className="info-container">
@@ -23,11 +23,8 @@ export function TempDashInfo({ weatherData }) {
               </div>
             </div>
             <div className="row">
-              <div className="col-4 p-0">
-                <div className="low-temp">Lo: 54&deg;F</div>
-              </div>
               <div className="col p-0">
-                <div className="high-temp">Hi: 74&deg;F</div>
+                <div className="low-temp">Feels like {weatherData.current.feelslike_f}&deg;F</div>
               </div>
             </div>
           </div>

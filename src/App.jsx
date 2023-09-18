@@ -4,26 +4,27 @@ import Header from "./components/Header.jsx";
 import TempDash from "./components/TempDash.jsx";
 import WeatherInfo from "./components/WeatherInfo.jsx";
 import Forecast from "./components/Forecast";
-import { dividerClasses } from "@mui/material";
 
 function App() {
   const API_KEY = import.meta.env.VITE_API_KEY;
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  async function fetchData(location) {
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`);
+    const data = await response.json();
+    setWeatherData(data);
+    setIsLoading(false);
+  }
+
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=Edison&aqi=no`);
-      const data = await response.json();
-      setWeatherData(data);
-      setIsLoading(false);
-    }
-    fetchData();
+    
+    fetchData("Edison");
   }, []);
 
   return (
     <div className="App">
-      <Header />
+      <Header fetchData={fetchData}/>
       {isLoading ? (
         <div>
           <h1 className="text-center mt-5">Loading...</h1>
