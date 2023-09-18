@@ -11,6 +11,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   async function fetchData(location) {
+    setIsLoading(true);
     const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=5&aqi=no&alerts=no
     `);
     const data = await response.json();

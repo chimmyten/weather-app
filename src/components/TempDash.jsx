@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 export function TempDashInfo({ weatherData }) {
-  console.log(weatherData);
   return (
     <div>
       <div className="info-container">

@@ -1,5 +1,6 @@
 export default function WeatherInfo({ weatherData }) {
-  const timeHour = (new Date()).getHours();
+  const time = weatherData.location.localtime.split(" ")[1];
+  const timeHour = time.split(":")[0];
   return (
     <div className="container">
       <div className="row gx-5 mt-5">
