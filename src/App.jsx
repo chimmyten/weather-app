@@ -11,20 +11,20 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   async function fetchData(location) {
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`);
+    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=5&aqi=no&alerts=no
+    `);
     const data = await response.json();
     setWeatherData(data);
     setIsLoading(false);
   }
 
   useEffect(() => {
-    
     fetchData("Edison");
   }, []);
 
   return (
     <div className="App">
-      <Header fetchData={fetchData}/>
+      <Header fetchData={fetchData} />
       {isLoading ? (
         <div>
           <h1 className="text-center mt-5">Loading...</h1>
@@ -36,7 +36,7 @@ function App() {
               <TempDash weatherData={weatherData} />
             </div>
             <div className="col-md-6 col-lg-5 row align-items-center">
-              <WeatherInfo />
+              <WeatherInfo weatherData={weatherData} />
             </div>
           </div>
           <div className="row justify-content-center mt-5">
