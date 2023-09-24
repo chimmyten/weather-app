@@ -18,10 +18,10 @@ export default function Forecast({ weatherData }) {
       <div className="row justify-content-center pb-2 gx-5">
         <div className="col-3 col-lg-2 border-bottom">{displayDate1}</div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
-          {weatherData.forecast.forecastday[1].day.mintemp_f}&deg;F
+          Lo: {weatherData.forecast.forecastday[1].day.mintemp_f}&deg;F
         </div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
-          {weatherData.forecast.forecastday[1].day.maxtemp_f}&deg;F
+          Hi: {weatherData.forecast.forecastday[1].day.maxtemp_f}&deg;F
         </div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat d-flex">
           <img className="rain-img" src={rain} alt="rain" />
@@ -31,10 +31,10 @@ export default function Forecast({ weatherData }) {
       <div className="row justify-content-center pb-2 gx-5">
         <div className="col-3 col-lg-2 border-bottom">{displayDate2}</div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
-          {weatherData.forecast.forecastday[2].day.mintemp_f}&deg;F
+          Lo: {weatherData.forecast.forecastday[2].day.mintemp_f}&deg;F
         </div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
-          {weatherData.forecast.forecastday[2].day.maxtemp_f}&deg;F
+          Hi: {weatherData.forecast.forecastday[2].day.maxtemp_f}&deg;F
         </div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat d-flex">
           <img className="rain-img" src={rain} alt="rain" />
@@ -44,10 +44,10 @@ export default function Forecast({ weatherData }) {
       <div className="row justify-content-center pb-2 gx-5">
         <div className="col-3 col-lg-2 border-bottom">{displayDate3}</div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
-          {weatherData.forecast.forecastday[3].day.mintemp_f}&deg;F
+          Lo: {weatherData.forecast.forecastday[3].day.mintemp_f}&deg;F
         </div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
-          {weatherData.forecast.forecastday[3].day.maxtemp_f}&deg;F
+          Hi: {weatherData.forecast.forecastday[3].day.maxtemp_f}&deg;F
         </div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat d-flex">
           <img className="rain-img" src={rain} alt="rain" />
