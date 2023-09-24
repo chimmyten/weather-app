@@ -1,13 +1,24 @@
+import { DatasetLinkedOutlined } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 
 export function TempDashInfo({ weatherData }) {
+  console.log(weatherData);
+
+  function getDateAndTime(dateTime) {
+    const dayOfWeek = dateTime.split(" ")[0];
+    const date = dateTime.split(" ").slice(1, 3).join(" ");
+    const time = dateTime.split(" ")[4].slice(0, 5);
+    return `${dayOfWeek}, ${date} ${time}`;
+  }
+  const displayDate = getDateAndTime(new Date(weatherData.location.localtime_epoch * 1000).toString());
+
   return (
     <div>
       <div className="info-container">
         <div className="location">
           {weatherData.location.name}, {weatherData.location.country}
         </div>
-        <div className="date h5">{weatherData.location.localtime}</div>
+        <div className="date h5">{displayDate}</div>
         <div>
           <div className="temp m-0">{weatherData.current.temp_f}&deg;F</div>
           <div className="container">
@@ -36,7 +47,7 @@ export function TempDashInfo({ weatherData }) {
 export default function TempDash({ weatherData }) {
   return (
     <>
-      <TempDashInfo weatherData={weatherData}/>
+      <TempDashInfo weatherData={weatherData} />
     </>
   );
 }

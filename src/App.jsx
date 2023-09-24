@@ -41,7 +41,7 @@ function App() {
             </div>
           </div>
           <div className="row justify-content-center mt-5">
-            <Forecast />
+            <Forecast weatherData={weatherData}/>
           </div>
         </div>
       )}
