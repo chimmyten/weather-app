@@ -58,7 +58,7 @@ export default function Header({ fetchData }) {
         <UnitSwitch />
       </div>
       <div className="col-2 col-lg-1 offset-1 offset-lg-5">
-        <button className="sign-in-btn">Sign in</button>
+        {/* <button className="sign-in-btn">Sign in</button> */}
       </div>
     </nav>
   );
