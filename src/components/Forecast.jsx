@@ -1,7 +1,6 @@
 import rain from "../assets/rain.png";
 
 export default function Forecast({ weatherData, fahrenheit }) {
-  console.log(weatherData);
   function getDate(dateTime) {
     const dayOfWeek = dateTime.split(" ")[0];
     const date = dateTime.split(" ").slice(1, 3).join(" ");

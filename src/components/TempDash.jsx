@@ -2,9 +2,7 @@ import { DatasetLinkedOutlined } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 
 export function TempDashInfo({ weatherData, fahrenheit }) {
-
-  console.log(fahrenheit);
-
+  
   function getDateAndTime(dateTime) {
     const dayOfWeek = dateTime.split(" ")[0];
     const date = dateTime.split(" ").slice(1, 3).join(" ");
