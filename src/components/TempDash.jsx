@@ -2,14 +2,16 @@ import { DatasetLinkedOutlined } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 
 export function TempDashInfo({ weatherData, fahrenheit }) {
-  
-  function getDateAndTime(dateTime) {
-    const dayOfWeek = dateTime.split(" ")[0];
-    const date = dateTime.split(" ").slice(1, 3).join(" ");
-    const time = dateTime.split(" ")[4].slice(0, 5);
-    return `${dayOfWeek}, ${date} ${time}`;
-  }
-  const displayDate = getDateAndTime(new Date(weatherData.location.localtime_epoch * 1000).toString());
+
+  const date = new Date();
+  const localDate = date.toLocaleString("en-US", {
+    timeZone: weatherData.location.tz_id,
+    weekday: "long",
+    month: "long",
+    hour: "numeric",
+    minute: "2-digit",
+    day: "2-digit",
+  });
 
   return (
     <div>
@@ -17,9 +19,11 @@ export function TempDashInfo({ weatherData, fahrenheit }) {
         <div className="location">
           {weatherData.location.name}, {weatherData.location.country}
         </div>
-        <div className="date h5">{displayDate}</div>
+        <div className="date h5">{localDate}</div>
         <div>
-          <div className="temp m-0">{fahrenheit ? `${weatherData.current.temp_f}\u00B0F` : `${weatherData.current.temp_c}\u00B0C`}</div>
+          <div className="temp m-0">
+            {fahrenheit ? `${weatherData.current.temp_f}\u00B0F` : `${weatherData.current.temp_c}\u00B0C`}
+          </div>
           <div className="container">
             <div className="row w-50">
               <div className="col d-flex ps-0">
@@ -43,10 +47,10 @@ export function TempDashInfo({ weatherData, fahrenheit }) {
   );
 }
 
-export default function TempDash({ weatherData, fahrenheit}) {
+export default function TempDash({ weatherData, fahrenheit }) {
   return (
     <>
-      <TempDashInfo weatherData={weatherData} fahrenheit={fahrenheit}/>
+      <TempDashInfo weatherData={weatherData} fahrenheit={fahrenheit} />
     </>
   );
 }
