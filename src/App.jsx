@@ -30,7 +30,7 @@ function App() {
 
   //fetch data on page load
   useEffect(() => {
-    fetchData("Edison");
+    fetchData("New York");
   }, []);
 
   return (
