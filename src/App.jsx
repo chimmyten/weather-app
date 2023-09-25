@@ -9,6 +9,15 @@ function App() {
   const API_KEY = import.meta.env.VITE_API_KEY;
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [fahrenheit, setFahrenheit] = useState(true);
+
+  function setUnit(e) {
+    if (e.target.checked) {
+      setFahrenheit(false);
+    } else if (!e.target.checked) {
+      setFahrenheit(true);
+    }
+  }
 
   async function fetchData(location) {
     setIsLoading(true);
@@ -19,13 +28,14 @@ function App() {
     setIsLoading(false);
   }
 
+  //fetch data on page load
   useEffect(() => {
     fetchData("Edison");
   }, []);
 
   return (
     <div className="App">
-      <Header fetchData={fetchData} />
+      <Header fetchData={fetchData} setUnit={setUnit}/>
       {isLoading ? (
         <div>
           <h1 className="text-center mt-5">Loading...</h1>
@@ -34,14 +44,14 @@ function App() {
         <div className="container app-content-container mt-5">
           <div className="row justify-content-center">
             <div className="col-md-6 col-lg-5 ps-5">
-              <TempDash weatherData={weatherData} />
+              <TempDash weatherData={weatherData} fahrenheit={fahrenheit}/>
             </div>
             <div className="col-md-6 col-lg-5 row align-items-center">
               <WeatherInfo weatherData={weatherData} />
             </div>
           </div>
           <div className="row justify-content-center mt-5">
-            <Forecast weatherData={weatherData}/>
+            <Forecast weatherData={weatherData} fahrenheit={fahrenheit}/>
           </div>
         </div>
       )}

@@ -1,12 +1,15 @@
 import "./components.css";
 
-function UnitSwitch() {
+function UnitSwitch({ setUnit }) {
+  function handleClick(e) {
+    setUnit(e);
+  }
   return (
     <div className="container p-0">
       <div className="d-flex">
         F
         <div className="form-check form-switch ms-2">
-          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={handleClick} />
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
             C
           </label>
@@ -16,7 +19,7 @@ function UnitSwitch() {
   );
 }
 
-export default function Header({ fetchData }) {
+export default function Header({ fetchData, setUnit }) {
   function handleSubmit(e) {
     e.preventDefault();
     const input = e.target.querySelector(".search-bar");
@@ -55,7 +58,7 @@ export default function Header({ fetchData }) {
         </form>
       </div>
       <div className="col-1 ms-4">
-        <UnitSwitch />
+        <UnitSwitch setUnit={setUnit}/>
       </div>
       <div className="col-2 col-lg-1 offset-1 offset-lg-5">
         {/* <button className="sign-in-btn">Sign in</button> */}
