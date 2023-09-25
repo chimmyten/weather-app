@@ -7,6 +7,7 @@ import Forecast from "./components/Forecast";
 
 function App() {
   const API_KEY = import.meta.env.VITE_API_KEY;
+  console.log(API_KEY);
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [fahrenheit, setFahrenheit] = useState(true);
