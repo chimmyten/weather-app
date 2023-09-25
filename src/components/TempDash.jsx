@@ -1,4 +1,3 @@
-import { DatasetLinkedOutlined } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 
 export function TempDashInfo({ weatherData, fahrenheit }) {
