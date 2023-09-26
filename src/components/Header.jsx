@@ -29,12 +29,12 @@ export default function Header({ fetchData, setUnit }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light container-fluid justify-content-start">
       <div className="mb-0 h1 col-2 col-lg-1 ps-md-4">
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Favorites
           </button>
           <ul className="dropdown-menu">
-            {/* <li>
+            <li>
               <a className="dropdown-item" href="#">
                 New York, United States
               </a>
@@ -48,9 +48,9 @@ export default function Header({ fetchData, setUnit }) {
               <a className="dropdown-item" href="#">
                 Seattle, United States
               </a>
-            </li> */}
+            </li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <div className="col-4 col-lg-2 offset-1 search-form-container">
         <form className="form-inline" onSubmit={handleSubmit}>
