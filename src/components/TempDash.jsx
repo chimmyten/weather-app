@@ -11,9 +11,7 @@ export function TempDashInfo({ weatherData, fahrenheit }) {
     minute: "2-digit",
     day: "2-digit",
   });
-
-  console.log(weatherData);
-
+  
   return (
     <div>
       <div className="info-container">
