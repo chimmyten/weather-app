@@ -6,8 +6,7 @@ import WeatherInfo from "./components/WeatherInfo.jsx";
 import Forecast from "./components/Forecast";
 
 function App() {
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  console.log(import.meta.env.VITE_API_KEY);
+  const API_KEY = "f14cbf9a5b2d4040a9530857231509";
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [fahrenheit, setFahrenheit] = useState(true);
@@ -22,7 +21,8 @@ function App() {
 
   async function fetchData(location) {
     setIsLoading(true);
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=5&aqi=no&alerts=no
+    const response =
+      await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=5&aqi=no&alerts=no
     `);
     const data = await response.json();
     setWeatherData(data);
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header fetchData={fetchData} setUnit={setUnit}/>
+      <Header fetchData={fetchData} setUnit={setUnit} />
       {isLoading ? (
         <div>
           <h1 className="text-center mt-5">Loading...</h1>
@@ -45,14 +45,14 @@ function App() {
         <div className="container app-content-container mt-5">
           <div className="row justify-content-center">
             <div className="col-md-6 col-lg-5 ps-5">
-              <TempDash weatherData={weatherData} fahrenheit={fahrenheit}/>
+              <TempDash weatherData={weatherData} fahrenheit={fahrenheit} />
             </div>
             <div className="col-md-6 col-lg-5 row align-items-center">
               <WeatherInfo weatherData={weatherData} />
             </div>
           </div>
           <div className="row justify-content-center mt-5">
-            <Forecast weatherData={weatherData} fahrenheit={fahrenheit}/>
+            <Forecast weatherData={weatherData} fahrenheit={fahrenheit} />
           </div>
         </div>
       )}
