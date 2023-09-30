@@ -7,11 +7,11 @@ function UnitSwitch({ setUnit }) {
   return (
     <div className="container p-0">
       <div className="d-flex">
-        F
+        F/mi
         <div className="form-check form-switch ms-2">
           <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={handleClick} />
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
-            C
+            C/km
           </label>
         </div>
       </div>

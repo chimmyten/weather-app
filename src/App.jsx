@@ -48,7 +48,7 @@ function App() {
               <TempDash weatherData={weatherData} fahrenheit={fahrenheit} />
             </div>
             <div className="col-md-6 col-lg-5 row align-items-center">
-              <WeatherInfo weatherData={weatherData} />
+              <WeatherInfo weatherData={weatherData} fahrenheit={fahrenheit}/>
             </div>
           </div>
           <div className="row justify-content-center mt-5">
