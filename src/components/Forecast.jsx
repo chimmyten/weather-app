@@ -1,7 +1,6 @@
 import rain from "../assets/rain.png";
 
 export default function Forecast({ weatherData, fahrenheit }) {
-  console.log(weatherData);
   function getDisplayDate(dateString) {
     const year = dateString.split("-")[0];
     const month = dateString.split("-")[1];
