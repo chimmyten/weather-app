@@ -6,8 +6,8 @@
   font-size: 1.4rem;
 }
 
-.forecast-stat {
-  font-size: 1.2rem;
+.forecast-stat, .forecast-date {
+  font-size: 1.5rem;
 }
 
 .stat-container {

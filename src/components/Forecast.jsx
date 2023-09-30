@@ -14,12 +14,12 @@ export default function Forecast({ weatherData, fahrenheit }) {
 
   const day1 = getDisplayDate(weatherData.forecast.forecastday[1].date);
   const day2 = getDisplayDate(weatherData.forecast.forecastday[2].date);
-  const day3 = getDisplayDate(weatherData.forecast.forecastday[3].date);
+  // const day3 = getDisplayDate(weatherData.forecast.forecastday[3].date);
   return (
     <div className="container forecast overflow-hidden">
-      <div className="row justify-content-center mb-3 forecast-heading">Forecast</div>
+      <div className="row justify-content-center mb-4 forecast-heading">Forecast</div>
       <div className="row justify-content-center pb-2 gx-5">
-        <div className="col-3 col-lg-2 border-bottom">{day1}</div>
+        <div className="col-3 col-lg-2 forecast-date border-bottom">{day1}</div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
           Lo:{" "}
           {fahrenheit
@@ -38,7 +38,7 @@ export default function Forecast({ weatherData, fahrenheit }) {
         </div>
       </div>
       <div className="row justify-content-center pb-2 gx-5">
-        <div className="col-3 col-lg-2 border-bottom">{day2}</div>
+        <div className="col-3 col-lg-2 forecast-date border-bottom">{day2}</div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
         Lo:{" "}
           {fahrenheit
@@ -56,7 +56,7 @@ export default function Forecast({ weatherData, fahrenheit }) {
           {weatherData.forecast.forecastday[2].day.daily_chance_of_rain}%
         </div>
       </div>
-      <div className="row justify-content-center pb-2 gx-5">
+      {/* <div className="row justify-content-center pb-2 gx-5">
         <div className="col-3 col-lg-2 border-bottom">{day3}</div>
         <div className="col-3 col-lg-2 text-center border-bottom forecast-stat p-0">
         Lo:{" "}
@@ -74,7 +74,7 @@ export default function Forecast({ weatherData, fahrenheit }) {
           <img className="rain-img" src={rain} alt="rain" />
           {weatherData.forecast.forecastday[3].day.daily_chance_of_rain}%
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
