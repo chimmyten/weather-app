@@ -6,7 +6,7 @@ import WeatherInfo from "./components/WeatherInfo.jsx";
 import Forecast from "./components/Forecast";
 
 function App() {
-  const API_KEY = "f14cbf9a5b2d4040a9530857231509";
+  const API_KEY = import.meta.env.VITE_KEY;
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [fahrenheit, setFahrenheit] = useState(true);

@@ -15,6 +15,8 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  VITE_INTERNAL: true
 # Allow one concurrent deployment
 concurrency:
   group: 'pages'
